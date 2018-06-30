@@ -1,6 +1,7 @@
 package com.example.thais.demowebservice.fragments
 
 
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -26,5 +27,8 @@ class ConsultaUsuarioUrlFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_consulta_usuario_url, container, false)
     }
 
-
+    interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        fun onFragmentInteraction(uri: Uri)
+    }
 }
