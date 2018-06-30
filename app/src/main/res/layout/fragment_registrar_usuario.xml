@@ -14,6 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
         android:text="documento" />
     <EditText
@@ -21,6 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
         android:text="nombre" />
     <EditText
@@ -28,7 +32,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
         android:text="profesion" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:layout_marginTop="40dp"
+        android:text="registrar"/>
 
 </LinearLayout>
