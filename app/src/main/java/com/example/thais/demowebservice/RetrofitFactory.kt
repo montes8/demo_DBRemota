@@ -8,18 +8,18 @@ object RetrofitFactory {
 
 
 
-        private val BASE_URL = "http://localhost/ejemploBDRemota/JSONLista.php"
+    private val BASE_URL = "https://mantenimientogalaxy.herokuapp.com/api/"
 
-        private var retrofit: Retrofit? = null
+    private var retrofit: Retrofit? = null
 
-        fun obtenerInstanciaRetrofit(): Retrofit {
-            if(retrofit==null){
-                retrofit = Retrofit.Builder()
-                        .baseUrl(BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build()
-            }
-            return retrofit!!
+    fun obtenerInstanciaRetrofit(): Retrofit {
+        if(retrofit==null){
+            retrofit = Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
         }
+        return retrofit!!
+    }
 
 }
