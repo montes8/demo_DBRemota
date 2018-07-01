@@ -1,7 +1,6 @@
 package com.example.thais.demowebservice.fragments
 
 
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -20,9 +19,5 @@ class BienvenidaFragment : Fragment() {
 
 
 
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
 
 }

@@ -17,7 +17,7 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
-        android:text="documento" />
+        android:hint="documento" />
     <EditText
         android:id="@+id/editText_nombre"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
-        android:text="nombre" />
+        android:hint="nombre" />
     <EditText
         android:id="@+id/editText_profesion"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"
         android:inputType="textPersonName"
-        android:text="profesion" />
+        android:hint="profesion" />
 
     <Button
         android:id="@+id/btn_registrarusuario"
