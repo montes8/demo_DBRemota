@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import com.example.thais.demowebservice.R
 
 
-var miVista : View? = null
-class RegistrarUsuarioFragment : Fragment(){
+class ConsultarProductoIdFragment : Fragment(){
 
+    var miVista : View? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         miVista = inflater.inflate(R.layout.fragment_registrar_usuario, container, false)

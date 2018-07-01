@@ -9,9 +9,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.view.Menu
 import android.view.MenuItem
-import com.example.thais.demowebservice.fragments.BienvenidaFragment
-import com.example.thais.demowebservice.fragments.DesarrolladorFragment
-import com.example.thais.demowebservice.fragments.RegistrarUsuarioFragment
+import com.example.thais.demowebservice.fragments.*
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -30,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar_home)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_navigation)//definimco que imagen queremos llamr la imagen
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)//habilitamos el icono
-        cambiarFragmento(RegistrarUsuarioFragment(),navigationView?.menu.getItem(0))
+        cambiarFragmento(BienvenidaFragment(),navigationView?.menu.getItem(0))
         navegacionDrawer()
     }
 
@@ -66,11 +64,15 @@ class HomeActivity : AppCompatActivity() {
                     gestorDeFragmentos = true
                 }
                 R.id.nav_registro -> {
-                    fragment = RegistrarUsuarioFragment()
+                    fragment = RegistarProductoFragment()
                     gestorDeFragmentos = true
                 }
                 R.id.nav_desarrollador -> {
                    fragment = DesarrolladorFragment()
+                    gestorDeFragmentos = true
+                }
+                R.id.nav_producto_id ->{
+                    fragment = ConsultarProductoIdFragment()
                     gestorDeFragmentos = true
                 }
 
