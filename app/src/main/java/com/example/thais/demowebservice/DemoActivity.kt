@@ -21,27 +21,35 @@ class DemoActivity : AppCompatActivity() {
 
 
         val galaxyService = ProductoService.create()
-
         val respuestaCallback = galaxyService.obtenerProductos()
+        val p= Producto(10,"phone nokia",1000.00,5,5,"nuevo movil")
 
-        respuestaCallback.enqueue(object: Callback<ArrayList<Producto>>{
 
-            override fun onResponse(call: Call<ArrayList<Producto>>?, response: Response<ArrayList<Producto>>?) {
+        val mandardatos =  galaxyService.registrar(p)
 
-                val listaProductos = response?.body()
-
-                Log.d("listausuarios",""+listaProductos)
-                edit_listademo.text = listaProductos.toString()
-
+        mandardatos.enqueue(object :Callback<Producto>{
+            override fun onResponse(call: Call<Producto>?, response: Response<Producto>?) {
+                val respuesta = response?.body()
+                edit_listademo.text = respuesta.toString()
 
             }
 
-            override fun onFailure(call: Call<ArrayList<Producto>>?, t: Throwable?) {
-
-                Toast.makeText(this@DemoActivity,"errorrr",Toast.LENGTH_LONG).show()
+            override fun onFailure(call: Call<Producto>?, t: Throwable?) {
 
             }
         })
+
+      /*  respuestaCallback.enqueue(object: Callback<ArrayList<Producto>>{
+            override fun onResponse(call: Call<ArrayList<Producto>>?, response: Response<ArrayList<Producto>>?) {
+                val listaProductos = response?.body()
+                Log.d("listausuarios",""+listaProductos)
+                edit_listademo.text = listaProductos.toString()
+            }
+            override fun onFailure(call: Call<ArrayList<Producto>>?, t: Throwable?) {
+                Toast.makeText(this@DemoActivity,"errorrr",Toast.LENGTH_LONG).show()
+
+            }
+        })*/
 
 
     }

@@ -13,7 +13,7 @@ interface ProductoService {
     fun obtenerProductoSegunId(@Path("idProducto") idProducto: Int): Call<Producto>
 
     @POST("productos")
-    fun registrar(@Body producto: Producto): Call<Void>
+    fun registrar(@Body producto: Producto): Call<Producto>
 
     @PUT("productos/{idProducto}")
     fun actualizar(@Path("idProducto") idProducto: Int,
