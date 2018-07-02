@@ -4,19 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DemoActivity">
+    tools:context=".DemoActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/edit_listademo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="202dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="lista"
         android:inputType="textPersonName"
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registrardemo"
+        app:layout_constraintEnd_toEndOf="@+id/btn_registrardemo"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_registrardemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="31dp"
+        android:text="registrarproducto"
+        app:layout_constraintBottom_toTopOf="@+id/edit_id_demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_listademo" />
+
+    <Button
+        android:id="@+id/button_buscar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="20dp"
+        android:text="buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_id_demo"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registrardemo" />
+
+    <EditText
+        android:id="@+id/edit_id_demo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="54dp"
+        android:ems="10"
+        android:hint="id"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/text_nombre_demo"
+        app:layout_constraintEnd_toStartOf="@+id/button_buscar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registrardemo" />
+
+    <TextView
+        android:id="@+id/text_nombre_demo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="51dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="54dp"
+        android:hint="nombre"
+        app:layout_constraintBottom_toTopOf="@+id/edit_eliminar"
+        app:layout_constraintEnd_toStartOf="@+id/text_precio_demo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_id_demo" />
+
+    <TextView
+        android:id="@+id/text_precio_demo"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        android:hint="precio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_nombre_demo"
+        app:layout_constraintTop_toBottomOf="@+id/button_buscar" />
+
+    <EditText
+        android:id="@+id/edit_eliminar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginStart="54dp"
+        android:ems="10"
+        android:hint="id delete"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_eliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_nombre_demo" />
+
+    <Button
+        android:id="@+id/button_eliminar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="49dp"
+        android:text="eliminar"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_eliminar" />
 </android.support.constraint.ConstraintLayout>

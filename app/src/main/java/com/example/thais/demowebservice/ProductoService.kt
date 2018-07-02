@@ -1,5 +1,6 @@
 package com.example.thais.demowebservice
 
+import android.widget.EditText
 import com.example.thais.demowebservice.entidades.Producto
 import retrofit2.Call
 import retrofit2.http.*
@@ -20,7 +21,7 @@ interface ProductoService {
                    @Body producto: Producto): Call<Void>
 
     @DELETE("productos/{idProducto}")
-    fun eliminar(@Path("idProducto") idProducto: Int): Call<Void>
+    fun eliminar(@Path("idProducto") idProducto: Int): Call<Producto>
 
     companion object {
 

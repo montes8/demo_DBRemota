@@ -12,16 +12,11 @@ import com.example.thais.demowebservice.R
 
 class DesarrolladorFragment : Fragment(){
 
-
+   var miVista : View? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         miVista = inflater.inflate(R.layout.fragment_desarrollador, container, false)
-
-
-
-
-
 
         return miVista
     }
