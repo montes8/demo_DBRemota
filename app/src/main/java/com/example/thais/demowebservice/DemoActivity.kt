@@ -45,31 +45,29 @@ class DemoActivity : AppCompatActivity() {
 
                 }
             })
-
-            button_buscar.setOnClickListener{
-                val x=edit_id_demo.toString()
-                val y= x.toInt()
+        }
+            button_buscar.setOnClickListener {
 
 
-                val buscarProducto = galaxyService.obtenerProductoSegunId(y)
-                buscarProducto.enqueue(object :Callback<Producto>{
+                val buscarProducto = galaxyService.obtenerProductoSegunId(6)
+                buscarProducto.enqueue(object : Callback<Producto> {
                     override fun onResponse(call: Call<Producto>?, response: Response<Producto>?) {
-                     val producto = response?.body()
+                        val producto = response?.body()
                         text_nombre_demo.text = producto?.nombre
                         text_precio_demo.text = producto?.precio.toString()
 
                     }
+
                     override fun onFailure(call: Call<Producto>?, t: Throwable?) {
 
                     }
                 })
+            }
 
 
                 button_eliminar.setOnClickListener{
 
-                    val a=edit_eliminar.toString()
-                    val b= a.toInt()
-                    val eliminarProducto = galaxyService.eliminar(b)
+                    val eliminarProducto = galaxyService.eliminar(10)
 
                     eliminarProducto.enqueue(object :Callback<Producto>{
                         override fun onResponse(call: Call<Producto>?, response: Response<Producto>?) {
@@ -83,7 +81,7 @@ class DemoActivity : AppCompatActivity() {
 
                 }
 
-            }
-        }
+
+
     }
 }
