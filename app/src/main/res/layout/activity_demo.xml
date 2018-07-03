@@ -54,7 +54,6 @@
         android:layout_marginStart="54dp"
         android:ems="10"
         android:hint="id"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/text_nombre_demo"
         app:layout_constraintEnd_toStartOf="@+id/button_buscar"
         app:layout_constraintStart_toStartOf="parent"
