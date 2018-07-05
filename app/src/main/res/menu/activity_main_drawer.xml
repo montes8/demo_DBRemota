@@ -14,7 +14,15 @@
         <item
             android:id="@+id/nav_producto_id"
             android:icon="@android:drawable/ic_menu_add"
-            android:title="Registro producto segun id" />
+            android:title="producto segun id" />
+        <item
+            android:id="@+id/nav_lista_productos"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Lista de productos" />
+        <item
+            android:id="@+id/nav_actualizar_productos"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="actualizar producto" />
 
 
 

@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 try {
                     Thread.sleep((3*1000).toLong())
-                    val i = Intent(baseContext, DemoActivity::class.java)
+                    val i = Intent(baseContext, HomeActivity::class.java)
                     startActivity(i)
                     finish()
                 } catch (e: Exception) {
