@@ -28,8 +28,8 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar_home)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_navigation)//definimco que imagen queremos llamr la imagen
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)//habilitamos el icono
-        cambiarFragmento(BienvenidaFragment(),navigationView?.menu.getItem(0))
-        navegacionDrawer()
+
+
     }
 
 
@@ -56,30 +56,23 @@ class HomeActivity : AppCompatActivity() {
 
     fun navegacionDrawer(){
         navigationView.setNavigationItemSelectedListener { item ->
-            var gestorDeFragmentos = false
-            var fragment : Fragment? = null
+
             when (item.itemId) {
                 R.id.nav_inicio -> {
-                    fragment = BienvenidaFragment()
-                    gestorDeFragmentos = true
+
                 }
                 R.id.nav_registro -> {
-                    fragment = RegistarProductoFragment()
-                    gestorDeFragmentos = true
+
                 }
                 R.id.nav_desarrollador -> {
-                   fragment = DesarrolladorFragment()
-                    gestorDeFragmentos = true
+
                 }
                 R.id.nav_producto_id ->{
-                    fragment = ConsultarProductoIdFragment()
-                    gestorDeFragmentos = true
-                }
+
+
 
             }
-            if (gestorDeFragmentos){
-                cambiarFragmento(fragment,item)
-                drawerLayout?.closeDrawers()
+
             }
             true
         }
